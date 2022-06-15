@@ -12,4 +12,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fad123f5b2d0d5143a57dfcf10ecd0b5, type: 3}
   m_Name: Colout
   m_EditorClassIdentifier: 
-  planetColour: {r: 0.2396226, g: 0.4013441, b: 1, a: 0}
+  planetColour: {r: 0.345105, g: 0.41970974, b: 0.6981132, a: 0}
