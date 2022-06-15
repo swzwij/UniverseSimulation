@@ -5,12 +5,12 @@ using UnityEngine;
 public class GravitySystem : MonoBehaviour
 {
     GravityBody[] bodies;
-
-    public float timeStep = 1;
-
+    private Universe _universe;
+    
     private void Awake()
     {
         bodies = FindObjectsOfType<GravityBody>();
+        _universe = GetComponentInParent<Universe>();
         //Time.fixedDeltaTime = timeStep;
     }
 
@@ -18,12 +18,12 @@ public class GravitySystem : MonoBehaviour
     {
         for (int i = 0; i < bodies.Length; i++)
         {
-            bodies[i].UpdateVelocity(bodies,timeStep);
+            bodies[i].UpdateVelocity(bodies, _universe.timeStep, _universe.physicsGravity);
         }
 
         for (int i = 0; i < bodies.Length; i++)
         {
-            bodies[i].UpdatePosition(timeStep);
+            bodies[i].UpdatePosition(_universe.timeStep);
         }
     }
 }
