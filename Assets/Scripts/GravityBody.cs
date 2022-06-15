@@ -13,6 +13,7 @@ public class GravityBody : MonoBehaviour
     private void Awake()
     {
         currentVelocity = initialVelocity;
+        rigidbody.useGravity = false;
     }
 
     public void UpdateVelocity(GravityBody[] allBodies, float timeStep)

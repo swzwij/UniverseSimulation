@@ -2,6 +2,8 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+[RequireComponent(typeof(GravityBody))]
+[RequireComponent(typeof(Rigidbody))]
 public class Planet : MonoBehaviour
 {
     [Range(2, 256)]
@@ -41,7 +43,7 @@ public class Planet : MonoBehaviour
                 GameObject meshObj = new GameObject("Mesh");
                 meshObj.transform.parent = transform;
 
-                meshObj.AddComponent<MeshRenderer>().sharedMaterial = new Material(Shader.Find("Standard"));
+                meshObj.AddComponent<MeshRenderer>().sharedMaterial = new Material(Shader.Find("Planet"));
                 meshFilters[i] = meshObj.AddComponent<MeshFilter>();
                 meshFilters[i].sharedMesh = new Mesh();
             }
