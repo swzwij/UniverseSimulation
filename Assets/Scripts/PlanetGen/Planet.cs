@@ -2,8 +2,6 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-[RequireComponent(typeof(GravityBody))]
-[RequireComponent(typeof(Rigidbody))]
 public class Planet : MonoBehaviour
 {
     [Range(2, 256)]
