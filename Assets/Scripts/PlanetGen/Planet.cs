@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -65,6 +66,11 @@ public class Planet : MonoBehaviour
             bool renderFace = faceRenderMask == FaceRenderMask.All || (int)faceRenderMask - 1 == i;
             meshFilters[i].gameObject.SetActive(renderFace);
         }
+    }
+
+    private void Awake()
+    {
+        GeneratePlanet();
     }
 
     public void GeneratePlanet()
