@@ -76,4 +76,4 @@ MonoBehaviour:
         persistence: 0.66
         center: {x: 0, y: 0, z: 0}
         minValue: 0
-        weightMultiplier: 0.8
+        weightMultiplier: 0.5
